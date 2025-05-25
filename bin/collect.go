@@ -41,8 +41,8 @@ func run() error {
 		return fmt.Errorf("failed to ping database %v: %v", config.Clickhouse.Database, err)
 	}
 	now := time.Now()
-	start := now.Add(-72 * time.Hour)
-	forecastEnd := now.Add(72 * time.Hour)
+	start := now.Add(-168 * time.Hour)
+	forecastEnd := now.Add(168 * time.Hour)
 	for _, loc := range config.Locations {
 		observationData, err := wcollect.FetchObservations(loc, start, now)
 		if err != nil {
