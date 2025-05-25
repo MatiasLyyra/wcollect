@@ -1,0 +1,11 @@
+{
+    "clickhouse": {
+        "addr": [
+            "localhost:9000"
+        ],
+        "user": "weather_writer",
+        "password": "",
+        "database": "weather"
+    },
+    "locations": ["Helsinki"] 
+}
